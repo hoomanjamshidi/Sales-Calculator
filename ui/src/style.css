@@ -1,0 +1,54 @@
+/** فونت واقعی وزیر همراه افزونه؛ تمام استایل‌ها و توکن‌های طرحک به ریشهٔ افزونه محدود می‌مانند. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face{font-family:Vazir;src:url('../../assets/fonts/Vazir-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:Vazir;src:url('../../assets/fonts/Vazir-Bold.woff2') format('woff2');font-weight:500 700;font-style:normal;font-display:swap}
+
+/* توکن‌های FarsiUI؛ کامپوننت‌های طرحک فونت را از --font-estedad می‌خوانند و اینجا به وزیر وصل می‌شود. */
+#sales-calculator{
+  --font-estedad:Vazir;
+  --background:220 33% 98%;
+  --foreground:222 47% 14%;
+  --card:0 0% 100%;
+  --card-foreground:222 47% 14%;
+  --primary:221 79% 50%;
+  --primary-foreground:0 0% 100%;
+  --secondary:220 25% 95%;
+  --secondary-foreground:222 47% 20%;
+  --muted:220 25% 96%;
+  --muted-foreground:218 15% 50%;
+  --accent:220 60% 96%;
+  --accent-foreground:221 79% 40%;
+  --destructive:350 80% 50%;
+  --destructive-foreground:0 0% 100%;
+  --success:152 64% 38%;
+  --warning:32 90% 45%;
+  --border:220 22% 90%;
+  --input:220 22% 88%;
+  --ring:221 79% 60%;
+  font-family:Vazir,Tahoma,sans-serif;color:hsl(var(--foreground));direction:rtl;font-size:14px;line-height:1.7;margin-left:20px;
+}
+
+/* reset محدود: پیشخوان وردپرس برای input، select و button سبک سراسری دارد.
+   :where ویژگی را پایین نگه می‌دارد تا کلاس‌های Tailwind (#sales-calculator .x) همیشه برنده باشند. */
+#sales-calculator :where(*,*::before,*::after){box-sizing:border-box;border-width:0;border-style:solid;border-color:hsl(var(--border))}
+#sales-calculator :where(h1,h2,h3,p){margin:0;color:inherit}
+#sales-calculator :where(button,input,select){font:inherit;color:inherit;margin:0;letter-spacing:inherit}
+#sales-calculator :where(button){cursor:pointer;background:transparent;padding:0;line-height:inherit;text-align:inherit}
+#sales-calculator :where(button:disabled){cursor:not-allowed}
+#sales-calculator :where(input[type=text],input[type=search]){box-shadow:none;min-height:0;padding:0;border-radius:0;background:transparent;line-height:inherit;-webkit-appearance:none;appearance:none}
+#sales-calculator :where(input[type=search])::-webkit-search-cancel-button{display:none}
+#sales-calculator :where(input:focus,button:focus){box-shadow:none;outline:none}
+#sales-calculator :where(button:focus-visible,[role=button]:focus-visible,input:focus-visible){outline:2px solid hsl(var(--ring));outline-offset:2px}
+#sales-calculator :where(svg){flex-shrink:0}
+#sales-calculator :where(ul){margin:0;padding:0;list-style:none}
+#sales-calculator :where(li){margin:0}
+
+#sales-calculator .sc-app{min-height:calc(100vh - 32px);background:radial-gradient(ellipse 900px 420px at 85% -12%,hsl(221 90% 93%),transparent),hsl(var(--background));padding:24px 28px 12px}
+/* نوار رشته‌های رنگی کلاف در نسخه‌های برند؛ گرادیان از متغیر --sc-yarn در PHP می‌آید. */
+#sales-calculator .sc-yarn{height:4px;margin:-24px -28px 20px;background:var(--sc-yarn);border-radius:0 0 4px 4px}
+@media(max-width:782px){#sales-calculator .sc-yarn{margin:-16px -12px 14px}}
+#sales-calculator .sc-tabular{font-variant-numeric:tabular-nums}
+@media(max-width:782px){#sales-calculator{margin-left:0}#sales-calculator .sc-app{padding:16px 12px}}
+@media(prefers-reduced-motion:reduce){#sales-calculator *{animation-duration:.01ms!important;transition-duration:.01ms!important}}

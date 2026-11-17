@@ -1,0 +1,26 @@
+# تحلیل ایستا با stubهای وردپرس/ووکامرس؛ دامنهٔ نسخه همهٔ PHP 8.0 تا 8.5 را پوشش می‌دهد.
+parameters:
+  level: 5
+  phpVersion:
+    min: 80000
+    max: 80599
+  paths:
+    - src
+    - sales-calculator.php
+    - uninstall.php
+  scanFiles:
+    - vendor/php-stubs/wordpress-stubs/wordpress-stubs.php
+    - vendor/php-stubs/woocommerce-stubs/woocommerce-stubs.php
+    - vendor/php-stubs/woocommerce-stubs/woocommerce-packages-stubs.php
+  bootstrapFiles:
+    - tests/phpstan-constants.php
+  # در زمان اجرا بسته به نوع نصب (ZIP یا Composer) تعیین می‌شود.
+  dynamicConstantNames:
+    - SALES_CALCULATOR_SCOPED
+  ignoreErrors:
+    # upgrade.php فقط در نصب واقعی وردپرس وجود دارد.
+    - identifier: requireOnce.fileNotFound
+      path: src/Infrastructure/Schema.php
+    # کلاس پیشونددار فقط در lib/ بستهٔ انتشار ساخته می‌شود.
+    - identifier: class.notFound
+      path: src/Export/PdfWriter.php

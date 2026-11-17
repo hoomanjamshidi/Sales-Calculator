@@ -1,0 +1,4 @@
+{
+  "require": {"humbug/php-scoper": "^0.18"},
+  "config": {"sort-packages": true}
+}

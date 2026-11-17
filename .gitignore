@@ -1,0 +1,13 @@
+node_modules/
+vendor/
+.qa/
+.scoped/
+output/
+assets/build/
+.phpunit.cache/
+tools/*/vendor/
+.DS_Store
+.phpunit.result.cache
+.claude/
+# خروجی ساخت (scripts/build_release.sh آن را دوباره می‌سازد)
+/lib/

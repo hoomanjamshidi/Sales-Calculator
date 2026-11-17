@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ruleset name="Sales Calculator WordPress">
+  <description>قواعد وردپرس با نام کلاس‌های PSR-4 و مستندسازی متناسب با تایپ‌های PHP 8؛ سازگاری با همهٔ نسخه‌های PHP 8.0 به بالا بررسی می‌شود.</description>
+  <file>src</file><file>sales-calculator.php</file><file>uninstall.php</file>
+  <rule ref="WordPress">
+    <exclude name="WordPress.Files.FileName"/>
+    <exclude name="WordPress.NamingConventions.ValidVariableName"/>
+    <exclude name="WordPress.NamingConventions.ValidFunctionName"/>
+    <exclude name="WordPress.PHP.YodaConditions"/>
+    <exclude name="WordPress.WP.Capabilities.Unknown"/>
+    <exclude name="WordPress.WP.AlternativeFunctions"/>
+    <exclude name="Squiz.Commenting.FunctionComment.MissingParamTag"/>
+    <exclude name="Squiz.Commenting.FunctionCommentThrowTag"/>
+  </rule>
+  <config name="testVersion" value="8.0-"/>
+  <config name="minimum_wp_version" value="6.6"/>
+  <rule ref="PHPCompatibilityWP"/>
+</ruleset>

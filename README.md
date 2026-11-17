@@ -4,6 +4,8 @@
 
 افزونهٔ **فارسی و راست‌به‌چپ** وردپرس برای گزارش دقیق فروش محصولات ساده و **متغیر** در ووکامرس، با تقویم شمسی و میلادی و خروجی **اکسل** و **PDF** (با فونت وزیر).
 
+**[⬇ دانلود مستقیم افزونه (نسخهٔ ۱٫۲٫۰)](https://github.com/hoomanjamshidi/Sales-Calculator/raw/main/releases/sales-calculator-1.2.0.zip)**
+
 ![نمای کلی گزارش](docs/screenshots/report.png)
 
 ## امکانات
@@ -54,7 +56,7 @@
 
 ## نصب
 
-۱. بستهٔ `sales-calculator-<نسخه>.zip` را از بخش [Releases](https://github.com/hoomanjamshidi/Sales-Calculator/releases) بگیرید، یا آن را [خودتان بسازید](#ساخت-بستهٔ-نصب).
+۱. بستهٔ آمادهٔ نصب را مستقیم دانلود کنید: **[sales-calculator-1.2.0.zip](https://github.com/hoomanjamshidi/Sales-Calculator/raw/main/releases/sales-calculator-1.2.0.zip)** (یا آن را [خودتان بسازید](#ساخت-بستهٔ-نصب)).
 
 ۲. در پیشخوان وردپرس به «افزونه‌ها ← افزودن ← بارگذاری افزونه» بروید، ZIP را نصب و فعال کنید.
 
